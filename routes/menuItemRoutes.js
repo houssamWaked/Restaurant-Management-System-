@@ -44,3 +44,4 @@ router.delete('/:menu_id', ValidateMenuItemIdParam, (req, res) =>
     MenuItemController.deleteMenuItem(req, res)
 );
 
+module.exports=router;

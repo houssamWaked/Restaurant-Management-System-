@@ -1,4 +1,4 @@
-const userRepository = require('../repositories/userRepository');
+const userRepository = require('../repositories/userRepositories');
 const { generateToken } = require('../utils/jwt');
 const bcrypt = require('bcrypt');
 

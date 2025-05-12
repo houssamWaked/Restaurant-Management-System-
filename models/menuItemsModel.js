@@ -1,31 +1,32 @@
+const DataTypes = require("sequelize");
 const sequelize=require('../config/sequelize');
 
 const menuItem=sequelize.define(
     'menu_items',
 {
     menu_id:{
-        type:sequelize.DataTypes.INTEGER,
+        type:DataTypes.INTEGER,
         primaryKey:true,
         autoIncrement:true,
     },
     name:{
-        type:sequelize.DataTypes.STRING,
+        type:DataTypes.STRING,
         allowNull:false,
     },
     description:{
-        type:sequelize.DataTypes.STRING,
+        type:DataTypes.STRING,
         allowNull:true,
     },
     price:{
-        type:sequelize.DataTypes.FLOAT,
+        type:DataTypes.FLOAT,
         allowNull:false,
     },
     category:{
-        type:sequelize.DataTypes.STRING,
+        type:DataTypes.STRING,
         allowNull:false,
     },
   availabe:{
-        type:sequelize.DataTypes.BOOLEAN,
+        type:DataTypes.BOOLEAN,
         defaultValue:true,
         allowNull:false,
     },

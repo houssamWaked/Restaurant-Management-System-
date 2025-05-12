@@ -7,7 +7,9 @@ const cors = require('cors'); // Middleware to enable Cross-Origin Resource Shar
 const sequelize = require('./config/sequelize'); // Sequelize ORM instance to interact with the database
 
 //routes
-
+const userRoutes = require('./routes/userRoutes'); // Routes for user management
+const inventoryRoutes = require('./routes/inventroyRoutes'); // Routes for inventory management
+const menuItemsRoutes = require('./routes/menuItemRoutes'); // Routes for menu items
 // Initialize Express application
 const app = express();
 
@@ -18,7 +20,9 @@ app.use(cors());
 app.use(express.json());
 
 // Set up routes
-
+app.use('/api/users', userRoutes); // User-related routes
+app.use('/api/inventory', inventoryRoutes); // Inventory-related routes
+app.use('/api/menu-items', menuItemsRoutes); // Menu items-related routes
 // Sync Sequelize models with the database
 sequelize
   .sync() // Synchronize Sequelize models with the database schema

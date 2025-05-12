@@ -1,4 +1,4 @@
-const userServices = require('../services/userServices');
+const userServices = require('../services/userService');
 
 class UserController{
     static handleError(res, error) {
