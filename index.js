@@ -10,6 +10,10 @@ const sequelize = require('./config/sequelize'); // Sequelize ORM instance to in
 const userRoutes = require('./routes/userRoutes'); // Routes for user management
 const inventoryRoutes = require('./routes/inventroyRoutes'); // Routes for inventory management
 const menuItemsRoutes = require('./routes/menuItemRoutes'); // Routes for menu items
+const tableRoutes = require('./routes/tableRoutes'); // Routes for table management
+const reservationRoutes = require('./routes/reservationRoutes'); // Routes for reservation management
+const orderRoutes = require('./routes/orderRoutes'); // Routes for order management
+const orderItemsRoutes = require('./routes/orderItemsRoutes'); // Routes for order items management
 // Initialize Express application
 const app = express();
 
@@ -23,6 +27,10 @@ app.use(express.json());
 app.use('/api/users', userRoutes); // User-related routes
 app.use('/api/inventory', inventoryRoutes); // Inventory-related routes
 app.use('/api/menu-items', menuItemsRoutes); // Menu items-related routes
+app.use('/api/tables', tableRoutes); // Table-related routes
+app.use('/api/reservations', reservationRoutes); // Reservation-related routes
+app.use('/api/orders', orderRoutes); // Order-related routes
+app.use('/api/order-items', orderItemsRoutes); // Order items-related routes
 // Sync Sequelize models with the database
 sequelize
   .sync() // Synchronize Sequelize models with the database schema
