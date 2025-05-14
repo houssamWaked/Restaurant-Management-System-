@@ -33,7 +33,6 @@ restaurant-management-system/
 ├── migrations/         # Sequelize migrations
 ├── models/             # Sequelize models
 ├── routes/             # API endpoints
-├── seeders/            # Sequelize seeders
 ├── utils/              # Utility functions
 ├── .env                # Environment variables
 ├── index.js            # Entry point
@@ -72,14 +71,8 @@ restaurant-management-system/
 
    Update the `config/config.json` file with your database credentials.
 
-5. **Run migrations and seeders:**
 
-   ```bash
-   npx sequelize-cli db:migrate
-   npx sequelize-cli db:seed:all
-   ```
-
-6. **Run the application:**
+5. **Run the application:**
 
    ```bash
    npm start
